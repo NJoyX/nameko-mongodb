@@ -17,7 +17,7 @@ setup(
         "mongoengine"
     ],
     include_package_data=True,
-    zip_safe=True,
+    zip_safe=False,
     keywords=['nameko', 'cassandra', 'database', 'bigdata'],
     classifiers=[
         "Operating System :: MacOS :: MacOS X",
