@@ -1,1 +1,47 @@
+configuration examples
+
+```yaml
+MONGODB_URI: mongoodb://localhost:27017/dbname?replicaSet=replset
+
+# or
+MONGODB_URI: "/tmp/mongodb-27017.sock"
+
+# or
+# ---- with aliases
+MONGODB:
+  default:
+    db: dbname
+    host: localhost
+    port: 27017
+    username: user
+    password: pass
+    replicaSet: replset
+    replicaSetOptions:
+      readPreference: secondaryPreferred # must be one of ``primary``, ``primaryPreferred``, ``secondary``, ``secondaryPreferred``, or ``nearest``
+      maxStalenessSeconds: -1
+    options:
+      appname: some_app_name
+      heartbeatFrequencyMS: 10000
+      # .... refer to MongoClient documentation from pymongo website
+  "<alias>":
+    db: dbname
+    host: localhost
+    # .... same as default
+
+# --- without and many
+MONGODB:
+  - db: dbname
+    host: localhost
+    port: 27017
+    # ....
+  - db: dbname2
+    host: localhost
+    port: 27018
+    # ....
+  - db: dbname3
+    host: localhost
+    port: 27018
+    # ....
+```
+
 @TODO doc, tests
