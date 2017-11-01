@@ -1,7 +1,7 @@
 configuration examples
 
 ```yaml
-MONGODB_URI: mongoodb://localhost:27017/dbname?replicaSet=replset
+MONGODB_URI: mongodb://localhost:27017/dbname?replicaSet=replset
 
 # or
 MONGODB_URI: "/tmp/mongodb-27017.sock"
